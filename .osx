@@ -1,4 +1,12 @@
+#!/bin/bash
+
 # ~/.osx — http://mths.be/osx
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 ###############################################################################
 # General UI/UX                                                               #
@@ -52,8 +60,13 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
 # Fix for the ancient UTF-8 bug in QuickLook (http://mths.be/bbo)
-# Commented out, as this is known to cause problems when saving files in Adobe Illustrator CS5 :(
+# Commented out, as this is known to cause problems when saving files in
+# Adobe Illustrator CS5 :(
 #echo "0x08000100:0" > ~/.CFUserTextEncoding
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
@@ -231,8 +244,9 @@ defaults write com.apple.dock launchanim -bool false
 # Speed up Mission Control animations
 defaults write com.apple.dock expose-animation-duration -float 0.1
 
-# Group windows by application in Mission Control
-defaults write com.apple.dock "expose-group-by-app" -bool true
+# Don’t group windows by application in Mission Control
+# (i.e. use the old Exposé behavior instead)
+defaults write com.apple.dock "expose-group-by-app" -bool false
 
 # Don’t show Dashboard as a Space
 defaults write com.apple.dock "dashboard-in-overlay" -bool true
@@ -250,9 +264,6 @@ defaults write com.apple.dock autohide -bool true
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
-
-# Enable iTunes track notifications in the Dock
-defaults write com.apple.dock itunes-notifications -bool true
 
 # Reset Launchpad
 find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
@@ -276,6 +287,9 @@ defaults write com.apple.dock wvous-tr-modifier -int 0
 ###############################################################################
 # Safari & WebKit                                                             #
 ###############################################################################
+
+# Allow hitting the Backspace key to go to the previous page in history
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
 
 # Hide Safari’s bookmarks bar by default
 defaults write com.apple.Safari ShowFavoritesBar -bool false
@@ -310,14 +324,11 @@ defaults write com.apple.addressbook ABShowDebugMenu -bool true
 # Enable Dashboard dev mode (allows keeping widgets on the desktop)
 #defaults write com.apple.dashboard devmode -bool true
 
-# Enable the debug menu in iCal
+# Enable the debug menu in iCal (pre-10.8)
 defaults write com.apple.iCal IncludeDebugMenu -bool true
 
-# Make the iTunes arrow links go to your library instead of the iTunes Store
-defaults write com.apple.iTunes invertStoreLinks -bool true
-
-# Disable the iTunes arrow links completely
-defaults write com.apple.iTunes show-store-arrow-links -bool false
+# Disable the iTunes store link arrows
+defaults write com.apple.iTunes show-store-link-arrows -bool false
 
 # Disable the Ping sidebar in iTunes
 defaults write com.apple.iTunes disablePingSidebar -bool true
@@ -326,6 +337,9 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 defaults write com.apple.iTunes disablePing -bool true
 
 # Make ⌘ + F focus the search input in iTunes
+# To use these commands in another language, browse iTunes’s package contents,
+# open `Contents/Resources/your-language.lproj/Localizable.strings`, and look
+# for `kHiddenMenuItemTargetSearch`.
 defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 # Disable send and reply animations in Mail.app
@@ -334,6 +348,9 @@ defaults write com.apple.Mail DisableSendAnimations -bool true
 
 # Copy email addresses as `foo@example.com` instead of `Foo Bar <foo@example.com>` in Mail.app
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+
+# Add the keyboard shortcut ⌘ + Enter to send an email in Mail.app
+defaults write com.apple.mail NSUserKeyEquivalents -dict-add "Send" "@\\U21a9"
 
 # Enable the debug menu in Disk Utility
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
@@ -393,7 +410,8 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
-for app in Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer Twitter; do
+for app in "Address Book" "Contacts" "iCal" "Calendar" "Dock" "Finder" "Mail" \
+	"Safari" "iTunes" "SystemUIServer" "Terminal" "Twitter"; do
 	killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
