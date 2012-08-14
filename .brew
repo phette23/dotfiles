@@ -17,8 +17,9 @@ brew install wget --enable-iri
 
 # Install RingoJS and Narwhal
 # Note that the order in which these are installed is important; see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+# I would never use these... -EJP
+#brew install ringojs
+#brew install narwhal
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
@@ -38,7 +39,7 @@ brew install git
 brew install lynx
 brew install node
 brew install rename
-brew install rhino
+#brew install rhino
 brew install tree
 brew install webkit2png
 
