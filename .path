@@ -1,0 +1,3 @@
+# To make Homebrew work, put it at the front of the path
+# so brew packages are used over Mac OS defaults (e.g. git)
+export PATH="/usr/local/bin:$PATH"
