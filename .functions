@@ -1,3 +1,14 @@
+#########################
+# My Personal Functions #
+#########################
+
+# Open series of work URLs
+function work() {
+    open "http://info.chesapeake.edu/librarystats/"
+    open "https://libraryh3lp.com/webchat/"
+    open "https://drive.google.com/a/skipjack.chesapeake.edu/#activity"
+}
+
 # Create a new directory and enter it
 function mkd() {
 	mkdir -p "$@" && cd "$@"
