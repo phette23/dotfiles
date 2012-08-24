@@ -14,7 +14,7 @@ alias g="git"
 #alias j="jobs"
 alias v="vim"
 #alias m="mate ."
-alias s="subl ."
+alias s="open -a 'Sublime Text 2.app'"
 alias o="open"
 alias oo="open ."
 
@@ -22,9 +22,6 @@ alias oo="open ."
 alias gs="git status"
 alias gc="git commit -am"
 alias gd="git diff"
-
-# Open file in Sublime Text (mine)
-alias sbl="open -a 'Sublime Text 2.app'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
