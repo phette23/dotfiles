@@ -10,6 +10,38 @@ function work() {
 	open "https://www.rememberthemilk.com/home/phette23/"
 }
 
+# Print cheat sheet of dotfiles functions/aliases
+function cheat() {
+	echo "~ - go to user's home directory"
+	echo ".. - go up one level, .... is 2, etc."
+	echo "c - trim new lines & copy to clipboard"
+	echo "d - go to ~/Dropbox"
+	echo "dataurl - make data URL from file"
+	echo "emptytrash - empties the trash"
+	echo "fs - get file size"
+	echo "g - alias for git"
+	echo "gurl - Gzip-enabled curl"
+	echo "(hide|show)desktop - hide or show Desktop icons"
+	echo "httpcompression - test if URL uses Gzip"
+	echo "ip - echo external IP"
+	echo "l - list files in long format"
+	echo "la - list all files in long format"
+	echo "lsa - list all files in short format"
+	echo "lsd - list directories only"
+	echo "note - add string as new to Notes app"
+	echo "mkd - make directory & enter it"
+	echo "o - alias for open"
+	echo "oo - open current directory"
+	echo "phpserver X - open PHP server in . on port X"
+	echo "remind - add string as new in Reminders app"
+	echo "s - open in Sublime Text"
+	echo "server X - open a server in . on port X"
+	echo "spot(off|on) - turn Spotlight off & on"
+	echo "urlencode - URL encode string"
+	echo "update - get OS X, Homebrew, & NPM updates"
+	echo "v - alias for vim"
+}
+
 ####################
 # End My Functions #
 ####################
