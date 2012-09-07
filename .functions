@@ -9,9 +9,9 @@ function res() {
 
 # Open series of work URLs
 function work() {
-    open "http://info.chesapeake.edu/librarystats/"
-    open "https://libraryh3lp.com/webchat/"
-    open "https://drive.google.com/a/skipjack.chesapeake.edu/#activity"
+	open "http://info.chesapeake.edu/librarystats/reference/"
+	open "https://libraryh3lp.com/webchat/"
+	open "https://drive.google.com/a/skipjack.chesapeake.edu/#activity"
 	open "https://www.rememberthemilk.com/home/phette23/"
 }
 
