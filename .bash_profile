@@ -41,3 +41,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # If possible, add tab completion for many more commands
 [ -f /etc/bash_completion ] && source /etc/bash_completion
+
+# BASH completion for Homebrew
+# See: github.com/mxcl/homebrew/wiki/Tips-N%27-Tricks
+source $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
