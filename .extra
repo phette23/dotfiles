@@ -1,0 +1,2 @@
+# Default for pngcrush
+alias png='pngcrush -reduce -brute'
