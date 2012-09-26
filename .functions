@@ -11,7 +11,7 @@ function res() {
 function work() {
 	open "http://info.chesapeake.edu/librarystats/reference/"
 	open "https://libraryh3lp.com/webchat/"
-	open "https://drive.google.com/a/skipjack.chesapeake.edu/#activity"
+	open "https://drive.google.com/#activity"
 	open "https://www.rememberthemilk.com/home/phette23/"
 }
 
