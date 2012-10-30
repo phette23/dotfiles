@@ -3,3 +3,6 @@ alias png='pngcrush -reduce -brute'
 
 # Git Bash Completion for Homebrew package
 source /usr/local/etc/bash_completion.d/git-completion.bash
+
+# Z from Homebrew
+source `brew --prefix`/etc/profile.d/z.sh
