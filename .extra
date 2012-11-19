@@ -1,8 +1,13 @@
 # Default for pngcrush
 alias png='pngcrush -reduce -brute'
 
-# Git Bash Completion for Homebrew package
-source /usr/local/etc/bash_completion.d/git-completion.bash
+# Check if brew is defined, run Homebrew-specific commands
+# Source for this condition:
+# stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script#answer-4785518
+if command -v "notexists" &> /dev/null 2>&1; then
+    # Git Bash Completion for Homebrew package
+    source /usr/local/etc/bash_completion.d/git-completion.bash
 
-# Z from Homebrew
-source `brew --prefix`/etc/profile.d/z.sh
+    # Z from Homebrew
+    source `brew --prefix`/etc/profile.d/z.sh
+fi
