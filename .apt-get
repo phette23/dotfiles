@@ -6,7 +6,7 @@ sudo apt-get update
 
 # Install all my packages
 # -y = "assume yes to all prompts & run non-interactively"
-sudo apt-get -y install adobe-flashplugin apache2 audacity chromium-browser epiphany-browser gimp gnome-do idle-python2.7 inkscape lynx nautilus-dropbox midori mysql-server scribus
+sudo apt-get -y install adobe-flashplugin apache2 audacity chromium-browser epiphany-browser gimp gnome-do idle-python2.7 inkscape lynx nautilus-dropbox midori mysql-server scribus synaptic
 
 # Done! Yay! Dropbox is the only major item not in apt-get
 echo "Done! Don't forget to manually install Dropbox: https://www.dropbox.com/install?os=lnx"
