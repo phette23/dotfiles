@@ -55,6 +55,11 @@ function gcheat() {
 	echo -e "$ORANGE g undopush \t\t$RESET- undo last g push\n"
 }
 
+# sass --watch syntax is too verbose
+function sw() {
+	sass --watch $1:$2 --style compressed
+}
+
 ####################
 # End My Functions #
 ####################
