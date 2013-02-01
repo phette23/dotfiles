@@ -15,7 +15,7 @@ alias g="git"
 #alias j="jobs"
 alias v="vim"
 #alias m="mate ."
-alias s="open -a 'Sublime Text 2.app'"
+alias s="subl"
 alias o="open"
 alias oo="open ."
 
