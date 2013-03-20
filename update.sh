@@ -9,4 +9,9 @@ if [ -f .gitconfig ] && [ -f ~/.user-gitconfig ]; then
     cat ~/.user-gitconfig .gitconfig > ~/.gitconfig
 fi
 
+# if bower's available, add it's completion script to .bash_profile
+if command -v "bower" &> /dev/null 2>&1; then
+    bower completion >> ~/.bash_profile
+fi
+
 source ~/.bash_profile
