@@ -10,4 +10,8 @@ if command -v "brew" &> /dev/null 2>&1; then
 
     # Z from Homebrew
     source `brew --prefix`/etc/profile.d/z.sh
+
+    # BASH completion for Homebrew
+    # See: github.com/mxcl/homebrew/wiki/Tips-N%27-Tricks
+    source $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
 fi
