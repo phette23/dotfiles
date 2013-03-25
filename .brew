@@ -45,5 +45,8 @@ brew install rename
 brew install tree
 brew install webkit2png
 
+brew tap homebrew/versions
+brew install lua52
+
 # Remove outdated versions from the cellar
 brew cleanup
