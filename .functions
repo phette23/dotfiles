@@ -29,17 +29,15 @@ function cheat() {
 	echo -e "$ORANGE gurl \t\t\t$RESET- Gzip-enabled curl"
 	echo -e "$ORANGE (hide|show)desktop \t$RESET- hide or show Desktop icons"
 	echo -e "$ORANGE httpcompression \t$RESET- test if URL uses Gzip"
-	echo -e "$ORANGE lsa \t\t\t$RESET- list all files in short format"
 	echo -e "$ORANGE lsd \t\t\t$RESET- list directories only"
 	echo -e "$ORANGE note \t\t\t$RESET- add string as new to Notes app"
-	echo -e "$ORANGE mkd \t\t\t$RESET- make directory & enter it"
 	echo -e "$ORANGE o \t\t\t$RESET- alias for open"
 	echo -e "$ORANGE oo \t\t\t$RESET- open current directory"
 	echo -e "$ORANGE remind \t\t$RESET- add string as new in Reminders app"
 	echo -e "$ORANGE sudo !! \t\t$RESET- run previous command with sudo"
 	echo -e "$ORANGE spot(off|on) \t\t$RESET- turn Spotlight off & on"
+	echo -e "$ORANGE tar -zxvf file.tar.gz \t$RESET- unzip tar ball"
 	echo -e "$ORANGE urlencode \t\t$RESET- URL encode string"
-	echo -e "$ORANGE v \t\t\t$RESET- alias for vim\n"
 }
 
 function gcheat() {
