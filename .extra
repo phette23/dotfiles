@@ -15,3 +15,9 @@ if command -v "brew" &> /dev/null 2>&1; then
     # See: github.com/mxcl/homebrew/wiki/Tips-N%27-Tricks
     source $(brew --prefix)/Library/Contributions/brew_bash_completion.sh
 fi
+
+# If npm is available, add its bash completion
+if command -v "npm" &> /dev/null 2>&1; then
+		# See npm -l for command usage
+		source <(npm completion)
+fi
