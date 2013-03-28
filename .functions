@@ -2,11 +2,6 @@
 # My Personal Functions #
 #########################
 
-# Restart terminal clean
-function res() {
-    clear && ls -a
-}
-
 # Open series of work URLs
 function work() {
 	open "http://info.chesapeake.edu/librarystats/reference/"
