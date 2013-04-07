@@ -28,3 +28,22 @@ if [ $ITERM_SESSION_ID ]; then
 	export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
 
+# Top 10 BASH commands used
+# from stackoverflow.com/questions/68372/what-is-your-single-most-favorite-command-line-trick-using-bash#answer-68390
+function top10() {
+    history | awk 'BEGIN {FS="[ \t]+|\\|"} {print $3}' | sort | uniq -c | sort -nr | head
+}
+
+# Misc tips from above link
+function cheatmoar() {
+    echo -e "$PURPLE\t\t more bash tricks\n"
+    echo -e "$ORANGE Ctrl+R $RESET\t-> reverse search through history"
+    echo -e "$ORANGE Quick Copy $RESET\t-> cp /home/foo/realllylongname.cpp{,-old}\n\t\tExpands to:\n\t\tcp /home/foo/realllylongname.cpp /home/foo/realllylongname.cpp-old"
+    echo -e "$ORANGE cd - $RESET\t\t-> go back to previous directory"
+    echo -e "$ORANGE ^str^str2 $RESET\t-> replaces str in the last cmd with str2 & executes it"
+    echo -en "$ORANGE " && echo -en '! tricks ' && echo -en "$RESET\t-> the " && echo -e '!$, !^ & !* expandos return, from the most recent line:\n\t\tthe last item, first non-command item, & all non-command items'
+    echo -en "$ORANGE cmd " && echo -en '!!:* ' && echo -e "$RESET\t->  run cmd with the previous ones' arguments"
+    echo -e "$ORANGE ESC . $RESET\t\t-> inserts arguments from last command"
+    echo -e "$ORANGE \cmd $RESET\t-> do not use the alias for 'cmd'"
+    echo -en "$ORANGE" && echo -en '!?foo?:p ' && echo -en "$RESET\t-> search for last cmd containing 'foo,' " && echo -e '!?foo executes'
+}
