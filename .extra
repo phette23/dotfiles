@@ -1,5 +1,8 @@
 # Default for pngcrush
 alias png='pngcrush -reduce -brute'
+# Syntax-highlighting cat on the command line
+# requires source-highlight from Homebrew
+alias ccat='src-hilite-lesspipe.sh'
 
 # Check if brew is defined, run Homebrew-specific commands
 # Source for this condition:
