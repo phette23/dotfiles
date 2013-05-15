@@ -50,6 +50,25 @@ brew install zopfli
 brew tap homebrew/versions
 brew install lua52
 
+########################
+# My Homebrew Packages #
+########################
+
+brew install closure-compiler
+brew install drush
+brew install exiftool
+brew install gnupg
+brew install jshon
+brew install optipng
+brew install phantomjs
+brew install pngcrush
+brew install source-highlight
+brew install z
+
+###################
+# End My Packages #
+###################
+
 # Install native apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
