@@ -107,10 +107,7 @@ function gcheat() {
 
 # Open series of work URLs
 function work() {
-    open "http://info.chesapeake.edu/librarystats/reference/"
-    open "https://libraryh3lp.com/webchat/"
-    open "https://drive.google.com/#activity"
-    open "https://www.rememberthemilk.com/home/phette23/"
+    open 'https://libanswers.com/login.php?iid=723&iid=723' 'https://drive.google.com/#activity' 'https://www.rememberthemilk.com/home/phette23/'
 }
 
 # sass --watch syntax is too verbose
