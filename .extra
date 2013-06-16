@@ -96,13 +96,12 @@ function cheat() {
 function gcheat() {
     # template: echo -e "$ORANGE cmd \t\t\t$RESET— description"
     cheattitle "git cheatsheet"
-    colorcheat 'g add -u' "\t-> add ALL files, even deletions"
-    colorcheat 'g branches' "\t-> verbose branches"
-    colorcheat 'g d' "\t\t-> diff between latest commit & current state"
-    colorcheat 'g di $N' "\t\t-> diff betw \$N commits ago & current state"
-    colorcheat 'g go X' "\t\t-> goto branch X, create if doesn't exist"
-    colorcheat 'g l' "\t\t-> view history graph & log"
-    colorcheat 'g remotes' "\t-> verbose remotes"
+    colorcheat 'g d' "\t\t\t-> diff between latest commit & current state"
+    colorcheat 'g di $N' "\t\t\t-> diff betw N commits ago & current state"
+    colorcheat 'g go X' "\t\t\t-> goto branch X, create if doesn't exist"
+    colorcheat 'g l' "\t\t\t-> view history graph & log"
+    colorcheat 'g reset $HASH' "\t\t-> revert to commit HASH but keep changes in working dir\n\t\t\tadd --hard flag to erase changes"
+    colorcheat 'g checkout -- <file>' "\t-> unstage changes to <file>"
     echo
 }
 
