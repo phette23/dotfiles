@@ -1,3 +1,6 @@
+# work around NPM "too many files open" bug
+ulimit -n 2323
+
 # Default for pngcrush
 alias png='pngcrush -reduce -brute'
 # Syntax-highlighting cat on the command line
