@@ -1,4 +1,6 @@
-# To make Homebrew work, put it at the front of the path
+# 1) To make Homebrew work, put it at the front of the path
 # so brew packages are used over Mac OS defaults (e.g. git)
-# so global NPM packages (e.g. Grunt, Yeoman) are available
-export PATH="/usr/local/bin:/usr/local/share/npm/bin:/Applications/Scripted/bin:$PATH"
+# 2) global NPM packages (e.g. Grunt, Yeoman)
+# 3) Homebrew ruby gems
+# 4) Scripted app
+export PATH="/usr/local/bin:/usr/local/share/npm/bin:/usr/local/opt/ruby/bin:/Applications/Scripted/bin:$PATH"
