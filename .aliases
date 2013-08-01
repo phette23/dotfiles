@@ -56,6 +56,9 @@ alias gurl='curl --compressed'
 # Get week number
 alias week='date +%V'
 
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo gem update; sudo softwareupdate -i -a; brew update; brew upgrade; npm update npm -g; npm update -g --silent;'
 
