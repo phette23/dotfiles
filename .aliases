@@ -20,7 +20,7 @@ alias o="open"
 alias oo="open ."
 
 # Git Shortcuts (mine)
-alias gs="git status"
+alias gs="git status -sb"
 alias gc="git commit -am"
 alias gd="git diff"
 
