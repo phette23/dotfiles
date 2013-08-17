@@ -120,3 +120,21 @@ function work() {
 function sw() {
     sass --watch $1:$2 --style compressed
 }
+
+function backup() {
+    if [ -d /Volumes/share ]; then
+        # flags:
+        # a = archive mode, makes recursive & a host of other options
+        # v = verbose
+        # u = if destination file is more recent, keep it
+        # z = use compression
+        rsync -avuz --progress ~/Music /Volumes/share/
+        rsync -avuz --progress ~/Movies/ /Volumes/share/Video/
+        rsync -avuz --progress ~/Documents/zzzArc /Volumes/share/
+        # b = create backups
+        rsync -avuzb --progress ~/Documents/OvalII.sparsebundle /Volumes/share/OvalII.sparsebundle
+        rsync -avuzb --progress ~/Documents/nsn.dmg /Volumes/share/nsn.dmg
+    else
+        echo "Connect to backup drive first."
+    fi
+}
