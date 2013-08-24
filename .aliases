@@ -1,3 +1,7 @@
+##############
+# My Aliases #
+##############
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -27,6 +31,19 @@ alias gd="git diff"
 # Node shortcuts
 # list only top-level global packages, pipe errors to null
 alias npmg="npm ls -g --depth=0 2>/dev/null"
+
+# Default for pngcrush
+alias png='pngcrush -reduce -brute'
+# Syntax-highlighting cat on the command line
+# requires source-highlight from Homebrew
+alias ccat='src-hilite-lesspipe.sh'
+# MARCgrep.pl
+# see: en.pusc.it/bib/MARCgrep
+alias mgrep='MARCgrep.pl'
+
+############
+# end mine #
+############
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
