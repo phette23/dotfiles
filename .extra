@@ -1,6 +1,3 @@
-# work around NPM "too many files open" bug
-ulimit -n 2323
-
 # initialize rbenv
 eval "$(rbenv init -)"
 
