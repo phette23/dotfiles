@@ -1,7 +1,3 @@
-##############
-# My Aliases #
-##############
-
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -23,6 +19,10 @@ alias s="subl"
 alias o="open"
 alias oo="open ."
 
+##############
+# My Aliases #
+##############
+
 # Git Shortcuts (mine)
 alias gs="git status -sb"
 alias gc="git commit -am"
@@ -40,6 +40,8 @@ alias ccat='src-hilite-lesspipe.sh'
 # MARCgrep.pl
 # see: en.pusc.it/bib/MARCgrep
 alias mgrep='MARCgrep.pl'
+# Cataclysm
+alias catac='/Applications/cataclysm/cataclysm-launcher'
 
 ############
 # end mine #
