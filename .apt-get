@@ -19,7 +19,6 @@ sudo apt-get -y install \
 	gnome-do \
 	inkscape \
 	lynx \
-	nautilus-dropbox \
 	midori \
   mongodb \
 	mysql-server \
