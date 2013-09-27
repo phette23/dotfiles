@@ -35,7 +35,6 @@ sudo apt-get -y install \
   source-highlight \
 	synaptic \
 	texlive-fonts-recommended \
-	ttf-mscorefonts-installer \
   yaz
 
 # Done! Yay! Dropbox is the only major item not in apt-get
